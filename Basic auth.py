@@ -85,8 +85,7 @@ def depositOperation():
     print('deposit operations')
 
 
-def noUse():
-    pass
+
 
 
 def generateAccountNumber():
