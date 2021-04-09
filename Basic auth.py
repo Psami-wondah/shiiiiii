@@ -85,6 +85,10 @@ def depositOperation():
     print('deposit operations')
 
 
+def noUse():
+    pass
+
+
 def generateAccountNumber():
     return ran.randrange(1000000000, 9999999999)
 
