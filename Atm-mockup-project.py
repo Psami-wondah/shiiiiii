@@ -95,8 +95,7 @@ def secondBankOperation():
             complaintOperation()
         elif selectedOption == 5:
             isValidOption = True
-            print('Thank you for Banking with us. ')
-            login()
+            logout()
         elif selectedOption == 6:
             isValidOption = True
             print('Thank you for Banking with us. ')
@@ -133,6 +132,7 @@ def complaintOperation():
     endingRemark()
 
 def logout():
+    print('Thank you for Banking with us. ')
     login()
 
 def endingRemark():
