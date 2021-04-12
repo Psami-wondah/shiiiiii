@@ -110,15 +110,18 @@ def bankOperations(user):
 
 def withdrawalOperation():
     withdrawalAmount = int(input('How much would you like to withdraw? \n'))
-    print('Please take your cash')
-    print('Currently dispensing', withdrawalAmount, 'Naira')
-    database[currentLoggedInAccount][4] -= withdrawalAmount
+    if withdrawalAmount <= database[currentLoggedInAccount][4]:
+        print('Currently dispensing', withdrawalAmount, 'Naira')
+        print('Please take your cash')
+        database[currentLoggedInAccount][4] -= withdrawalAmount
+    else:
+        print('Sorry, you do not have enough funds')
     endingRemark()
 
 def depositOperation():
     depositAmount = int(input('How much would you like to deposit? \n'))
     database[currentLoggedInAccount][4] += depositAmount
-    print('%d Naira has Been added to your account and now your balance is: %s' % (depositAmount, database[currentLoggedInAccount][4]))
+    print('%d Naira has Been added to your account and now your balance is: %d' % (depositAmount, database[currentLoggedInAccount][4]))
     endingRemark()
 
 def balanceCheck():
